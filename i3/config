@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id xset r rate 300 50
-exec_always --no-startup-id xrdb .Xdefaults
+exec_always --no-startup-id xrdb ~/.config/.Xdefaults
 exec --no-startup-id feh --bg-fill Videos/wallpaperjam.com-66998.jpg
 
 exec_always --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc
@@ -203,5 +203,5 @@ bar {
 	}
  font pango:Iosevka Term Slab 12
  position top
-status_command /home/sourjo/bumblebee-status/bumblebee-status -m  pomodoro time weather amixer memory disk cpu   sensors2  battery -t nord-powerline
+status_command /home/sourjo/bumblebee-status/bumblebee-status -m  pomodoro time weather amixer disk cpu   sensors2  battery -t dracula-powerline
 }
