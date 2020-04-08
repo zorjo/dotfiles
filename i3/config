@@ -30,7 +30,7 @@ exec_always --no-startup-id xset r rate 300 50
 exec_always --no-startup-id xrdb .Xdefaults
 exec --no-startup-id feh --bg-fill Videos/wallpaperjam.com-66998.jpg
 
-#exec_always --no-startup-id compton  
+exec_always --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -197,9 +197,9 @@ bar {
  colors {
         background #333333
 
- 	       focused_workspace  #FF0909 #AA006A #000000
-    	       active_workspace   #330202 #AA006A #777777
-              inactive_workspace #333333 #0088FF #888888
+ 	       focused_workspace  #CC4409  #2E3440 #ffffff
+    	       active_workspace   #330202  #D08770 #ffffff
+              inactive_workspace #333333 #D08770 #112233
 	}
  font pango:Iosevka Term Slab 12
  position top
