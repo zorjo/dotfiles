@@ -14,37 +14,59 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 12
-client.focused              #353439 #9F001A #7B9F35
-client.unfocused        #353439 #9FEE00 #7B9F35
+#client.focused              #353439 #9F001A #7B9F35
+#client.unfocused        #353439 #9FEE00 #7B9F35
+set $grey                #334455
+set $magenta             #ddbbcc
+set $blue                #557788
+set $cyan                #22ddcc
+set $black               #334455
+set $white               #aacccc
+set $yellow              #dd9933
+set $red                 #aa5566
+set $green               #779988
+
+# theme colors
+set $bg-color 	         #334455
+set $inactive-bg-color   #334455
+set $text-color          #aacccc
+set $inactive-text-color #557788
+set $urgent-bg-color     #ee3355
+client.focused          $bg-color           $bg-color          $white               $bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $bg-color
+client.background       $bg-color
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:mononoki nerd font mono 8
+font pango:mononoki nerd font mono 12
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id xset r rate 300 50
 exec_always --no-startup-id xrdb ~/st/.Xdefaults
-exec_always --no-startup-id xrdb -merge ~/oo
+#exec_always --no-startup-id xrdb -merge ~/oo
 exec --no-startup-id feh --bg-fill Videos/wallpaperjam.com-66998.jpg
 
-exec_always --no-startup-id compton --backend glx --paint-on-overlay --vsync opengl-swc
+#exec --no-startup-id picom
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-for_window [class=".*"] border pixel 1
+#exec --no-startup-id nm-applet
+for_window [class=".*"] border pixel 3
 gaps outer 15
 gaps inner 15
+smart_borders on
 bindsym $mod+z 		gaps inner current minus 5
 bindsym $mod+Shift+z 	gaps inner current plus 5
 bindsym Mod1+g exec geany 
 bindsym $mod+x 		gaps outer current minus 5
 bindsym $mod+Shift+x 	gaps outer current plus 5
 #ranger
-bindsym Mod1+r      exec st -e  ranger Templates
+bindsym Mod1+r      exec st -e  ranger
 #bindsym Mod1+Shift+q exec st  quit
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -58,6 +80,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec st
+bindsym Mod1+z exec zathura
 bindsym Mod1+1 exec firefox-nightly 
 # kill focused window
 bindsym $mod+q kill
@@ -194,15 +217,24 @@ bindsym Mod1+Shift+v exec st -e vim .
 bindsym Mod1+Shift+w exec st -e nmtui.
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
+bar {status_command       i3status -c ~/.config/i3status/config
+        tray_padding         3
+ font pango:Iosevka Term Slab 15
  colors {
-        background #333333
+		 
+	 		# whole color settings
+						background   $black
+statusline   $white
+			separator    $grey
 
- 	       focused_workspace  #CC4409  #2E3440 #ffffff
-    	       active_workspace   #330202  #D08770 #ffffff
-              inactive_workspace #333333 #D08770 #112233
-	}
- font pango:Iosevka Term Slab 12
+					# type             border      backgr.     font
+					focused_workspace  $grey       $white      $black
+					active_workspace   $grey       $white      $black
+					inactive_workspace $grey       $black      $white
+					urgent_workspace   $valencia   $valencia   $black
+																							}
+	
  position top
-status_command /home/sourjo/bumblebee-status/bumblebee-status -m  pomodoro time weather amixer disk cpu   sensors2  battery -t solarized-powerline
+ height 25
+ #/home/sourjo/bumblebee-status/bumblebee-status -m  pomodoro time amixer disk cpu   sensors2  battery -t solarized-powerline
 }
