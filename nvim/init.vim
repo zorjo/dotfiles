@@ -1,4 +1,4 @@
-let mapleader =","
+"let mapleader =","
 
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -15,6 +15,7 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
 Plug 'lukesmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
+Plug 'gruvbox-community/gruvbox'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'honza/vim-snippets'
@@ -123,8 +124,9 @@ set expandtab        " expand tabs to spaces
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 set textwidth=120
 " turn syntax highlighting on
-"colorscheme koehler
-colorscheme desert
+colorscheme gruvbox
+set background=dark
+"colorscheme desert
    autocmd FileType * call <SID>def_base_syntax() " autocmd Syntax may be better
    function! s:def_base_syntax()
     " Simple example:w
@@ -133,6 +135,9 @@ colorscheme desert
    hi link commonOperator Operator
    hi link baseDelimiter Special
   endfunction
-
+""TERM=xterm-256color
 nnoremap <C-b> :!g++ -std=c++17 -Wshadow -Wall -o %:r.out % -O2 -Wno-unused-result
-nnoremap <C-x> :!./%:r.out
+
+nnoremap <F2> :tabn<CR>
+inoremap <F5> <Esc>:w<CR>i
+"nnoremap <C-x> :split | terminal ./%:r.out
