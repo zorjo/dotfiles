@@ -1,0 +1,30 @@
+! special
+!st..foreground:   #e8dfd6
+st.background:   #111111
+st.cursorColor:  #fda53c
+st.font:DM Mono-15
+!black
+st.color0: #222222
+st.color8: #777777
+!red
+st.color1: #E84F4F
+st.color9: #D23D3D
+!green
+st.color2: #B7CE42
+st.color10: #BDE077
+!yellow
+st.color3: #FEA63C
+st.color11: #FFE863
+!blue
+st.color4: #66AABB
+st.color12: #AACCBB
+!magenta
+st.color5: #B7416E
+st.color13: #E16A98
+!cyan
+st.color6: #6D878D
+st.color14: #42717B
+!white
+st.color7: #DDDDDD
+st.color15: #CCCCCC
+

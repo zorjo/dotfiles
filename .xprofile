@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+#xrdb ~/Downloads/dotshare.txt
+#xrdb ~/luke
+#xrdb ~/grtest
+#xwallpaper --zoom ~/Pictures/light_by_zim2687_d6tq1a1.jpg
+#xwallpaper --center ~/Pictures/red.jpg
+#xwallpaper --zoom ~/Pictures/gruv-forest.jpg
+xwallpaper --zoom ~/Pictures/l1.jpeg
+#echo 70 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+#echo "60" | tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+#xwallpaper --zoom /mnt/wallpapers/wallpapers/Landscapes/1490825952959.jpg
+xset r rate 300 50 
+setxkbmap -option caps:backspace
+brightnessctl set 14
+xmodmap -e "keycode 66 = BackSpace"
+dunst &
+picom &
+notify-send "Welcome to the computer!"
+unclutter &
+xrdb ~/Videos/hy.txt
+#xrdb ~/dotsnew
+#xss-lock -- /usr/bin/slock &
