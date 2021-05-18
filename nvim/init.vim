@@ -1,4 +1,4 @@
-"let mapleader =","
+let mapleader =","
 
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -38,7 +38,7 @@ let g:UltiSnipsExpandTrigger='<tab>'
 	filetype plugin on
 	syntax on
 	set encoding=utf-8
-	set number relativenumber
+	set relativenumber
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -137,7 +137,7 @@ set background=dark
   endfunction
 ""TERM=xterm-256color
 nnoremap <C-b> :!g++ -std=c++17 -Wshadow -Wall -o %:r.out % -O2 -Wno-unused-result
-
+"inoremap ` <Esc>
 nnoremap <F2> :tabn<CR>
 inoremap <F5> <Esc>:w<CR>i
 "nnoremap <C-x> :split | terminal ./%:r.out

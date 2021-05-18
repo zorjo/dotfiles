@@ -67,26 +67,24 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Iosevka Term Slab
+    family: Space Mono
     # family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
 
   # The bold font face
   bold:
-    family: Iosevka Term Slab
+    family: Unifont #TerminessTTF Nerd Font Mono 
     # family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: Iosevka Term Slab
+    family: Unifont #TerminessTTF Nerd Font Mono 
     # family: "Fira Code"
-    # family: "Source Code Pro"
-    # style: "Medium Italic"
 
   # Point size of the font
-  size: 12.0
+  size: 10
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -125,11 +123,11 @@ draw_bold_text_with_bright_colors: false
 # custom_cursor_colors: false
 
 # Colors
-colors:
+#colors:
  ## Default colours
- primary:
-   background: '#282828'
-   foreground: '#ebdbb2'
+# primary:
+#   background: '#282828'
+#   foreground: '#ebdbb2'
 
   # Colors that should be used to draw the terminal cursor. If these are unset,
   # the cursor colour will be the inverse of the cell colour.
@@ -261,27 +259,27 @@ colors:
    # foreground: '0x8fa388'
 
   # Normal colors
-normal:
-    black:   '0x39474a'
-    red:     '0x986345'
-    green:   '0x788249'
-    yellow:  '0x9b6a46'
-    blue:    '0x3e5951'
-    magenta: '0xb9924a'
-    cyan:    '0x5d796a'
-    white:   '0x977d5e'
+#normal:
+#    black:   '0x39474a'
+#    red:     '0x986345'
+#    green:   '0x788249'
+#    yellow:  '0x9b6a46'
+#    blue:    '0x3e5951'
+#    magenta: '0xb9924a'
+#    cyan:    '0x5d796a'
+#    white:   '0x977d5e'
 
   # Bright colors
-bright:
-    black:   '0x4c5f63'
-    red:     '0xb07350'
-    green:   '0x869151'
-    yellow:  '0xaf6b42'
-    blue:    '0x567a6e'
-    magenta: '0xd69d55'
-    cyan:    '0x668574'
-    white:   '0xab9c71'
-    #normal:
+#bright:
+#    black:   '0x4c5f63'
+#    red:     '0xb07350'
+#    green:   '0x869151'
+#    yellow:  '0xaf6b42'
+#    blue:    '0x567a6e'
+#    magenta: '0xd69d55'
+#    cyan:    '0x668574'
+#    white:   '0xab9c71'
+#    #normal:
     #  black:   '#282828'
     # red:     '#cc241d'
     # green:   '#98971a'
@@ -333,7 +331,7 @@ indexed_colors: []
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: EaseOutExpo
   color: '0xffffff'
   duration: 0
@@ -586,7 +584,32 @@ live_config_reload: true
  # program: /usr/local/homebrew/bin/fish
   #args:
    # - --command=tmux
+schemes:
+ gruvbox: &gruvbox
+  primary:
+      #background: '#1d2021' # hard contrast: background = '#1d2021'
+      background: '#282828' # hard contrast: background = '#1d2021'
+      foreground: '#ebdbb2' # soft contrast: background = '#32302f'
+  normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+  bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
 
+colors: *gruvbox
 debug:
   # Should display the render timer
   render_timer: false
@@ -603,7 +626,7 @@ debug:
   #   - Info
   #   - Debug
   #   - Trace
-  log_level: None
+  log_level: OFF
 
   # Print all received window events.
   print_events: false

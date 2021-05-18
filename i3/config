@@ -25,7 +25,7 @@ set $white               #aacccc
 set $yellow              #dd9933
 set $red                 #aa5566
 set $green               #779988
-
+hide_edge_borders both
 # theme colors
 set $bg-color 	         #334455
 set $inactive-bg-color   #334455
@@ -48,7 +48,6 @@ font pango:mononoki nerd font mono 12
 # screen before suspend. Use loginctl lock-session to lock your screen.
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id xset r rate 300 50
-exec_always --no-startup-id xrdb ~/st/.Xdefaults
 #exec_always --no-startup-id xrdb -merge ~/oo
 exec --no-startup-id feh --bg-fill Videos/wallpaperjam.com-66998.jpg
 
@@ -59,7 +58,6 @@ exec --no-startup-id feh --bg-fill Videos/wallpaperjam.com-66998.jpg
 for_window [class=".*"] border pixel 3
 gaps outer 15
 gaps inner 15
-smart_borders on
 bindsym $mod+z 		gaps inner current minus 5
 bindsym $mod+Shift+z 	gaps inner current plus 5
 bindsym Mod1+g exec geany 
@@ -81,7 +79,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec st
 bindsym Mod1+z exec zathura
-bindsym Mod1+1 exec firefox-nightly 
+bindsym Mod1+1 exec firefox
 # kill focused window
 bindsym $mod+q kill
 
