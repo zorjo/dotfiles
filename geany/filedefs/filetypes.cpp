@@ -9,5 +9,5 @@ FT_02_LB=_Lint
 FT_02_CM=cppcheck --language=c++ --enable=warning,style --template=gcc "%f"
 FT_02_WD=
 EX_00_LB=_Execute
-EX_00_CM="./%e"
+EX_00_CM=\s"./%e"
 EX_00_WD=

@@ -10,6 +10,8 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 ""Plug 'scrooloose/nerdtree'
+    Plug 'pangloss/vim-javascript'
+    Plug 'mxw/vim-jsx'
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
@@ -127,14 +129,14 @@ set textwidth=120
 colorscheme gruvbox
 set background=dark
 "colorscheme desert
-   autocmd FileType * call <SID>def_base_syntax() " autocmd Syntax may be better
-   function! s:def_base_syntax()
+"   autocmd FileType * call <SID>def_base_syntax() " autocmd Syntax may be better
+ "  function! s:def_base_syntax()
     " Simple example:w
-    syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
- syntax match baseDelimiter ",\|{\|}\|;\|<\|>\|\[\|\]"
-   hi link commonOperator Operator
-   hi link baseDelimiter Special
-  endfunction
+"    syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
+" syntax match baseDelimiter ",\|{\|}\|;\|<\|>\|\[\|\]"
+ "  hi link commonOperator Operator
+ "  hi link baseDelimiter Special
+  "endfunction
 ""TERM=xterm-256color
 nnoremap <C-b> :!g++ -std=c++17 -Wshadow -Wall -o %:r.out % -O2 -Wno-unused-result
 "inoremap ` <Esc>
