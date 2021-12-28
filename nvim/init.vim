@@ -138,7 +138,7 @@ set background=dark
  "  hi link baseDelimiter Special
   "endfunction
 ""TERM=xterm-256color
-nnoremap <C-b> :!g++ -std=c++17 -Wshadow -Wall -o %:r.out % -O2 -Wno-unused-result
+nnoremap <C-a> :!g++ -std=c++17 -Wshadow -Wall -o %:r.out % -O2 -Wno-unused-result
 "inoremap ` <Esc>
 nnoremap <F2> :tabn<CR>
 inoremap <F5> <Esc>:w<CR>i

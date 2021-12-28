@@ -67,20 +67,20 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: Space Mono
+    family: mononoki
     # family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
 
   # The bold font face
   bold:
-    family: Unifont #TerminessTTF Nerd Font Mono 
+    family: Unifont #TerminessTTF Nerd Font Mono
     # family: "Fira Code"
     # family: "Source Code Pro"
 
   # The italic font face
   italic:
-    family: Unifont #TerminessTTF Nerd Font Mono 
+    family: Unifont #TerminessTTF Nerd Font Mono
     # family: "Fira Code"
 
   # Point size of the font
