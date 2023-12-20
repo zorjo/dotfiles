@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 ""Plug 'scrooloose/nerdtree'
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
+    Plug 'peitalin/vim-jsx-typescript'
 Plug 'junegunn/goyo.vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 Plug 'jreybert/vimagit'
@@ -25,6 +26,7 @@ Plug 'honza/vim-snippets'
 "Plug 'jeaye/color_coded'
 Plug 'SirVer/ultisnips'
 ""Plug 'valloric/youcompleteme'
+Plug 'mattn/emmet-vim'
 ""Plug 'kovetskiy/sxhkd-vim'
 call plug#end()
 set modifiable
@@ -35,7 +37,7 @@ set nohlsearch
 set clipboard+=unnamedplus
 let g:UltiSnipsExpandTrigger='<tab>'
 " Some basics:
-	nnoremap c "_c
+"	nnoremap c "_c
 	set nocompatible
 	filetype plugin on
 	syntax on

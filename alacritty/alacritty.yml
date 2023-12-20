@@ -40,7 +40,7 @@ window:
   # - none: neither borders nor title bar
   # - transparent: title bar, transparent background and title bar buttons
   # - buttonless: title bar, transparent background, but no title bar buttons
-  decorations: full
+  decorations: none
 
   # Startup Mode (changes require restart)
   #
@@ -67,7 +67,7 @@ font:
   # The normal (roman) font face to use.
   # Style can be specified to pick a specific face.
   normal:
-    family: mononoki
+    family: Mononoki Nerd Font Mono 
     # family: "Fira Code"
     # family: "Source Code Pro"
     # style: Retina
@@ -84,7 +84,7 @@ font:
     # family: "Fira Code"
 
   # Point size of the font
-  size: 10
+  size: 13
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -113,7 +113,7 @@ font:
   #
   # This is a global setting and will require a log out or restart to take
   # effect.
-  use_thin_strokes: true
+  #use_thin_strokes: true
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: false
@@ -337,7 +337,8 @@ bell:
   duration: 0
 
 # Background opacity
-background_opacity: 0.6
+window:
+  opacity: 0.6
 
 # Key bindings
 #
